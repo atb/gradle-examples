@@ -1,0 +1,17 @@
+subprojects {
+  apply plugin: 'java'
+  if (project.name.
+    matches('^.*service\\d+$'))
+    {
+      dependencies {
+        implementation project (':api')
+        implementation project (':shared')
+      }
+    }
+}
+
+project(':api') {
+  dependencies {
+    implementation project(':shared')
+  }
+}

@@ -1,0 +1,15 @@
+task odd {
+  group 'devops'
+  description 'Example with closures'
+}
+odd {
+  doFirst {
+    def isOdd = { int i -> i%2 != 0 }
+    println "The number 123 is odd? " + isOdd(123)
+  }
+}
+odd {
+  doLast {
+    println "Bye"
+  }
+}

@@ -1,0 +1,12 @@
+allprojects {
+  task build doLast {
+    println "Building project: " + project.name
+  }
+}
+
+subprojects {
+  task prebuild doLast {
+    println "It is a subproject!"
+  }
+  build.dependsOn prebuild
+}

@@ -1,0 +1,20 @@
+task hello {
+  group 'devops'
+  description 'The hello task greets Gradle by saying "Hello Gradle"'
+  // Adding extra properties to a task
+  ext.message = "What’s up?"
+  // This is executed during the configuration phase.’
+  println "Configuring hello task."
+}
+hello {
+  doFirst {
+    println "First time: " + message
+  }
+}
+hello { doLast {
+    println "Second time: " + message
+  }
+}
+hello {
+  println 'This is executed during the configuration phase as well.'
+}

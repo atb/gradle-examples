@@ -1,0 +1,1 @@
+include 'shared', 'api', ':service:service1', ':service:service2'
