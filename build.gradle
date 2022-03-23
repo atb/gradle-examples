@@ -1,0 +1,11 @@
+task taskY {
+    doLast {
+       println 'taskY'
+    }
+}
+task taskX {
+    dependsOn taskY
+    doLast {
+       println 'taskX'
+    }
+}
