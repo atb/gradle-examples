@@ -7,3 +7,15 @@ task configure {
     println pos.endIndex
   }
 }
+
+task exemplo {
+  ext.pos = new java.text.FieldPosition(10)
+
+  doLast {
+    // Apply the script
+    apply from: 'position.gradle', to: pos
+    println pos.beginIndex
+    println pos.endIndex
+  }
+}
+

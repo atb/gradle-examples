@@ -15,6 +15,10 @@ hello { doLast {
     println "Second time: " + message
   }
 }
+hello { doLast {
+    println "XXXX" 
+  }
+}
 hello {
   println 'This is executed during the configuration phase as well.'
 }

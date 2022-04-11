@@ -6,10 +6,23 @@ odd {
   doFirst {
     def isOdd = { int i -> i%2 != 0 }
     println "The number 123 is odd? " + isOdd(123)
+    println "The number 120 is odd? " + isOdd(120)
   }
 }
 odd {
   doLast {
     println "Bye"
   }
+}
+
+task taskY {
+    doLast {
+       println 'taskY'
+    }
+}
+task taskX {
+    dependsOn taskY, odd
+    doLast {
+       println 'taskX'
+    }
 }

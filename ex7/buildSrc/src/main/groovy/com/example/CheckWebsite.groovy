@@ -21,7 +21,7 @@ class CheckWebsite extends DefaultTask {
             Document doc = Jsoup.connect(url).get();
             String title = doc.title();
             println title
-            println url
+            //println url
         } catch (IOException e) {
             e.printStackTrace();
         }

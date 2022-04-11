@@ -2,6 +2,7 @@
 task defaultWebsiteCheck(type: com.example.CheckWebsite)
 
 task checkGradleWebsite(type: com.example.CheckWebsite) {
-    dependsOn defaultWebsiteCheck
-    url = 'https://docs.gradle.org/'
+    //dependsOn defaultWebsiteCheck
+    //url = 'https://docs.gradle.org/'
+    url = 'http://www.dei.isep.ipp.pt/'
 }
